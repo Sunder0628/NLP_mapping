@@ -17,7 +17,7 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 
 file_docs = []
 
-with open ('manf.txt') as f:
+with open ('manf.csv') as f:
     tokens = sent_tokenize(f.read())
     for line in tokens:
         file_docs.append(line)
@@ -73,7 +73,7 @@ sims = gensim.similarities.Similarity('workdir/',tf_idf[corpus],
 
 file2_docs = []
 
-with open ('retail.txt') as f:
+with open ('retail.csv') as f:
     tokens = sent_tokenize(f.read())
     for line in tokens:
         file2_docs.append(line)
